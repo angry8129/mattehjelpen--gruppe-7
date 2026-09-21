@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mattehjelpen</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Mattehjelpen</h1>
+
+      <section class="panel">
+        <label for="operation">Velg operasjon</label>
+        <select id="operation">
+          <option value="solve">Generisk solve</option>
+          <option value="derive">Deriver</option>
+          <option value="integrate">Integrer</option>
+          <option value="solve_equation">Løs likning</option>
+          <option value="solve_system">Løs likningssett</option>
+          <option value="solve_ode">Løs differensiallikning</option>
+          <option value="pythagoras">Pytagoras</option>
+          <option value="matrix_op">Matrise</option>
+          <option value="complex_op">Komplekst tall</option>
+        </select>
+
+        <div id="fields"></div>
+
+        <button id="runButton">Kjør</button>
+      </section>
+
+      <section class="panel result-panel">
+        <h2>Resultat</h2>
+        <pre id="result">Her kommer resultatet.</pre>
+      </section>
+
+      <section class="panel reflection-panel">
+        <h2>Refleksjonsnotat</h2>
+        <p>
+          Dette prosjektet løser matematikkproblemer med en enkel brukergrensesnitt- og API-arkitektur.
+          En typisk refleksjonssekvens er å skrive inn et uttrykk, sende det til backend, og få tilbake
+          både resultat og LaTeX-tekst for videre bruk i undervisning eller dokumentasjon.
+        </p>
+        <button id="reflectionButton" type="button">Vis eksempel på refleksjonsfunksjon</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
